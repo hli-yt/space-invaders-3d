@@ -25,11 +25,11 @@ https://hli-yt.github.io/space-invaders-3d/
 - Game states (Start, Playing, Game Over, Victory)
 
 ### ✅ Group Members
-- Helina Tesfaye ATE/1540/15 
-- Abenezer Melaku ATE/2490/16 
-- Etsubdink Belay ATE/6987/13 
-- Eyob Kassaye  ATE/4534/16 
-- Zeyid Abdulkadir ATE/2566/16
+1. Abenezer Melaku ATE/2490/16
+2. Etsubdink Belay ATE/6987/13
+3. Eyob Kassaye  ATE/4534/16
+4. Helina Tesfaye ATE/1540/15
+5. Zeyid Abdulkadir ATE/2566/16
 
 ## 🛠️ Installation & Setup
 
@@ -37,6 +37,7 @@ https://hli-yt.github.io/space-invaders-3d/
 ```bash
 
 [git clone https://github.com/yourusername/space-invaders-3d.git]
+
 
 
 
