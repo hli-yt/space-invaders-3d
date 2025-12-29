@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders 3D | Group 1 Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Game UI -->
+        <div id="ui">
+            <div id="score-board">
+                <div class="ui-item">
+                    <i class="fas fa-star"></i>
+                    <span id="score">0</span>
+                </div>
+                <div class="ui-item">
+                    <i class="fas fa-heart"></i>
+                    <span id="lives">3</span>
+                </div>
+                <div class="ui-item">
+                    <i class="fas fa-wave-square"></i>
+                    <span id="wave">1</span>
+                </div>
+            </div>
+            
+            <div id="controls-info">
+                <div class="control">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Move</span>
+                </div>
+                <div class="control">
+                    <i class="fas fa-space-awesome"></i>
+                    <span>Shoot</span>
+                </div>
+                <div class="control">
+                    <i class="fas fa-mouse"></i>
+                    <span>Look Around</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <h1><i class="fas fa-rocket"></i> SPACE INVADERS 3D</h1>
+            <p class="subtitle">Three.js Interactive Game</p>
+            <div class="game-info">
+                <p><i class="fas fa-check-circle"></i> 5+ Unique 3D Objects</p>
+                <p><i class="fas fa-check-circle"></i> OrbitControls Camera</p>
+                <p><i class="fas fa-check-circle"></i> Lighting & Textures</p>
+                <p><i class="fas fa-check-circle"></i> Keyboard & Mouse Controls</p>
+                <p><i class="fas fa-check-circle"></i> Animations & Collisions</p>
+            </div>
+            <button id="start-btn" class="btn">
+                <i class="fas fa-play"></i> START MISSION
+            </button>
+            <p class="hint">Group 1 Project | Software Engineering</p>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen" style="display: none;">
+            <h1><i class="fas fa-skull-crossbones"></i> MISSION FAILED</h1>
+            <div class="final-score">
+                <h2>FINAL SCORE: <span id="final-score">0</span></h2>
+                <p>Wave: <span id="final-wave">1</span></p>
+            </div>
+            <button id="restart-btn" class="btn">
+                <i class="fas fa-redo"></i> TRY AGAIN
+            </button>
+        </div>
+        
+        <!-- Win Screen -->
+        <div id="win-screen" class="screen" style="display: none;">
+            <h1><i class="fas fa-trophy"></i> VICTORY!</h1>
+            <div class="final-score">
+                <h2>FINAL SCORE: <span id="win-score">0</span></h2>
+                <p>All invaders eliminated!</p>
+            </div>
+            <button id="next-wave-btn" class="btn">
+                <i class="fas fa-forward"></i> NEXT WAVE
+            </button>
+        </div>
+        
+        <!-- Game Canvas (Auto-added by Three.js) -->
+    </div>
+    
+    <!-- Three.js Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    
+    <!-- Main Game Script -->
+    <script src="game.js"></script>
+</body>
+</html>

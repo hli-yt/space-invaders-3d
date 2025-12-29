@@ -1,0 +1,243 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0c0c2e 0%, #1a1a3e 100%);
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Game Container */
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* UI Elements */
+#ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+#score-board {
+    display: flex;
+    gap: 25px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.ui-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.ui-item i {
+    color: #00ffff;
+    font-size: 1.5rem;
+}
+
+#controls-info {
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.control i {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.control span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Screen Overlays */
+.screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, rgba(10, 10, 40, 0.95) 0%, rgba(20, 20, 60, 0.95) 100%);
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+    backdrop-filter: blur(15px);
+    border: 3px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+}
+
+.screen h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #00ffff, #0080ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.game-info {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 4px solid #00ffff;
+}
+
+.game-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.game-info i {
+    color: #00ff00;
+    margin-right: 10px;
+}
+
+.final-score {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.final-score h2 {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    background: linear-gradient(45deg, #00aaff, #0088ff);
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 10px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(0, 136, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 136, 255, 0.6);
+    background: linear-gradient(45deg, #00bbff, #0099ff);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.hint {
+    margin-top: 30px;
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Canvas */
+canvas {
+    display: block;
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #ui {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .screen h1 {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .ui-item, .control span {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for screens */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.screen {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Particle effect class */
+.particle-explosion {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
