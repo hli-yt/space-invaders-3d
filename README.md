@@ -3,7 +3,7 @@
 A 3D interactive web-based game built with Three.js for Software Engineering Project.
 
 ## 🎮 Live Demo
-[GitHub Pages Link Here]
+https://hli-yt.github.io/space-invaders-3d/
 
 ## 📋 Project Requirements Met
 
@@ -27,4 +27,5 @@ A 3D interactive web-based game built with Three.js for Software Engineering Pro
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/space-invaders-3d.git
+
+[git clone https://github.com/yourusername/space-invaders-3d.git]
