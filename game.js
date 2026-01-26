@@ -1,6 +1,5 @@
 // ============================================
 // SPACE INVADERS 3D - MAIN GAME FILE
-// Group 1 Project - Software Engineering
 // ============================================
 
 // GAME CONFIGURATION
@@ -658,4 +657,5 @@ console.log("✓ OrbitControls Camera");
 console.log("✓ Lighting System");
 console.log("✓ User Interaction");
 console.log("✓ Texture/Procedural Materials");
+
 console.log("✓ Animation System");
